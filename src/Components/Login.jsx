@@ -21,6 +21,7 @@ const Login = () => {
     const LOGIN_URL = `https://sleepy-escarpment-75011.herokuapp.com/api/v1/login`
     try {
       const res = await axios.post(LOGIN_URL, jsonSend)
+      localStorage.setItem('app_token', res.data.token)
       alert('Successful Login')
     } catch (error){
       alert('Error in Login')
