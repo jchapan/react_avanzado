@@ -9,7 +9,6 @@ function Home(props) {
     <AuthContextProvider>
       <Header />
       <h1>Bienvenido</h1>
-    
     </AuthContextProvider>
   );
 }
