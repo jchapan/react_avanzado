@@ -6,10 +6,12 @@ import Login from "./Components/Login.jsx";
 import Logout from "./Components/Logout.jsx";
 import Register from "./Components/Signup.jsx";
 import UsersList from "./Components/UsersList.jsx";
+import AuthContextProvider from "./contexts/AuthContext.js";
 
 export default function Routes() {
   return (
     <BrowserRouter>
+    <AuthContextProvider>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
@@ -17,6 +19,7 @@ export default function Routes() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/users" component={UsersList} />
       </Switch>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 }
